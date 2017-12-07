@@ -10,14 +10,6 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
     var qrCodeFrameView: UIView?
     let shapeLayer = CAShapeLayer()
     
-    @IBAction func startSession(_ sender: Any) {
-        captureSession?.startRunning()
-    }
-    
-    @IBAction func stopSession(_ sender: Any) {
-        captureSession?.stopRunning()
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
