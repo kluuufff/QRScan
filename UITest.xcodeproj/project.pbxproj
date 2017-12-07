@@ -14,9 +14,10 @@
 		176AD7DB1FD1AB2000980212 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176AD7D91FD1AB2000980212 /* LaunchScreen.storyboard */; };
 		176AD7E61FD1AB2000980212 /* UITestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7E51FD1AB2000980212 /* UITestTests.swift */; };
 		176AD7F11FD1AB2000980212 /* UITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7F01FD1AB2000980212 /* UITestUITests.swift */; };
-		176AD7FF1FD1ACD700980212 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7FE1FD1ACD700980212 /* ViewController2.swift */; };
 		176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD8001FD1B65B00980212 /* ViewControllerStart.swift */; };
 		176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */; };
+		17C73E591FD9527200FA24CE /* ViewControllerScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */; };
+		17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E5F1FD977E500FA24CE /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +51,10 @@
 		176AD7EC1FD1AB2000980212 /* UITestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		176AD7F01FD1AB2000980212 /* UITestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUITests.swift; sourceTree = "<group>"; };
 		176AD7F21FD1AB2000980212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		176AD7FE1FD1ACD700980212 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		176AD8001FD1B65B00980212 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScan.swift; sourceTree = "<group>"; };
+		17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScanResult.swift; sourceTree = "<group>"; };
+		17C73E5F1FD977E500FA24CE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +107,10 @@
 			children = (
 				176AD7D01FD1AB2000980212 /* AppDelegate.swift */,
 				176AD7D21FD1AB2000980212 /* ViewController.swift */,
-				176AD7FE1FD1ACD700980212 /* ViewController2.swift */,
 				176AD8001FD1B65B00980212 /* ViewControllerStart.swift */,
 				176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */,
+				17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */,
+				17C73E5F1FD977E500FA24CE /* TableViewController.swift */,
 				176AD7D41FD1AB2000980212 /* Main.storyboard */,
 				176AD7D71FD1AB2000980212 /* Assets.xcassets */,
 				176AD7D91FD1AB2000980212 /* LaunchScreen.storyboard */,
@@ -269,10 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				176AD7D31FD1AB2000980212 /* ViewController.swift in Sources */,
+				17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */,
 				176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */,
 				176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */,
 				176AD7D11FD1AB2000980212 /* AppDelegate.swift in Sources */,
-				176AD7FF1FD1ACD700980212 /* ViewController2.swift in Sources */,
+				17C73E591FD9527200FA24CE /* ViewControllerScanResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,10 +19,10 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         
         //navigationController?.navigationBar.prefersLargeTitles = false
         
-        let midX = self.view.bounds.midX
-        let midY = self.view.bounds.midY
+     //   let midX = self.view.bounds.midX
+     //   let midY = self.view.bounds.midY
         
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: midX,y: midY), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+       // let circlePath = UIBezierPath(arcCenter: CGPoint(x: midX,y: midY), radius: CGFloat(20), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
         
         //захват видео
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return } //устройство захвата; получает данные (1)
@@ -78,6 +78,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        
         if metadataObjects == nil || metadataObjects.count == 0 { //проверка на наличие кода
             qrCodeFrameView?.frame = CGRect.zero
             infoLabel.text = "QR Code или Bar Code не найден"
@@ -143,7 +144,15 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         
         if metadataObj.stringValue != nil { //если можно сконвертировать объект в строку
 
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult") as! ViewControllerScanResult
+            
             infoLabel.text = metadataObj.stringValue
+            myVC.stringPassed = infoLabel.text
+            navigationController?.pushViewController(myVC, animated: true)
+            stopCaptureSession()
+            if myVC.stringPassed != "" {
+                resumeCaptureSession()
+            }
             
             let arr = countries.map { $0.country }
             
@@ -153,23 +162,57 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             let givenId2 = Int(String(infoLabel.text.prefix(upTo: testStr2)))
             let location1 = countries.first{ $0.country == givenId1 }?.location ?? ""
             let location2 = countries.first{ $0.country == givenId2 }?.location ?? ""
+          //  let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult") as! ViewControllerScanResult
             
             //print(String(describing: countries.map { $0.country }))
+            
             while (i < arr.count) {
                 if (Int(String(infoLabel.text.prefix(upTo: testStr1))) == arr[i] || Int(String(infoLabel.text.prefix(upTo: testStr2))) == arr[i]) {
                     if location1 != "" {
-                        infoLabel.text = location1
+                        //infoLabel.text = location1
+                        myVC.stringPassed = location1
+                        navigationController?.pushViewController(myVC, animated: true)
+                        stopCaptureSession()
+                        if myVC.stringPassed != "" {
+                            resumeCaptureSession()
+                        }
                     }
-                    else { infoLabel.text = location2 }
+                    //else { infoLabel.text = location2 }
+                    else {
+                        myVC.stringPassed = location2
+                        navigationController?.pushViewController(myVC, animated: true)
+                        stopCaptureSession()
+                        if myVC.stringPassed != "" {
+                            resumeCaptureSession()
+                        }
+                    }
                 }
                 i += 1
             }
-         /*
+            
             // Stop capture session
-            videoPreviewLayer?.isHidden = true
-            qrCodeFrameView?.isHidden = true
-            self.captureSession?.stopRunning()
-        */
+            //videoPreviewLayer?.isHidden = true
+            //qrCodeFrameView?.isHidden = true
+            //self.captureSession?.stopRunning()
+            
+            
+            /*
+            //открыть новый viewcontroller
+            let secondViewController:ViewControllerScanResult = ViewControllerScanResult()
+            self.present(secondViewController, animated: true, completion: nil)
+            */
         }
     }
+    
+    /**
+     Stops running capture session but all setup devices, inputs and outputs stay for further reuse.
+     */
+    open func stopCaptureSession() {
+        captureSession?.stopRunning()
+    }
+    
+    open func resumeCaptureSession() {
+        captureSession?.startRunning()
+    }
+    
 }
