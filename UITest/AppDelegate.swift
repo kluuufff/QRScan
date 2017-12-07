@@ -13,10 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            defaults.set("No", forKey:"isFirstTime")
+            defaults.synchronize()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "startStory")
+            
+            self.window?.rootViewController = viewController
+            self.window?.makeKeyAndVisible()
+        }
         return true
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +53,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    //3D Touch actions
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "Scan")
+        
+        if let tabVC = self.window?.rootViewController as? UITabBarController {
+            
+            if shortcutItem.type == "com.ihope.UITest.takeScan" {
+                self.window?.rootViewController = viewController
+                self.window?.makeKeyAndVisible()
+            } else if shortcutItem.type == "com.ihope.UITest.openArchive" {
+                tabVC.selectedIndex = 1
+            }
+            
+        }
+    }
 
 }
 

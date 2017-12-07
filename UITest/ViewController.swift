@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.topItem?.title = "Сканер"
+        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        
+        startButton.layer.cornerRadius = 10
+        startButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
