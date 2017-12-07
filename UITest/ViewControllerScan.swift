@@ -145,12 +145,13 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         if metadataObj.stringValue != nil { //если можно сконвертировать объект в строку
 
             let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult") as! ViewControllerScanResult
+            let myVC2 = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult2") as! ViewControllerScanResult2
             
             infoLabel.text = metadataObj.stringValue
-            myVC.stringPassed = infoLabel.text
-            navigationController?.pushViewController(myVC, animated: true)
+            myVC2.stringPassed2 = infoLabel.text
+            navigationController?.pushViewController(myVC2, animated: true)
             stopCaptureSession()
-            if myVC.stringPassed != "" {
+            if myVC2.stringPassed2 != "" {
                 resumeCaptureSession()
             }
             
@@ -169,7 +170,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             while (i < arr.count) {
                 if (Int(String(infoLabel.text.prefix(upTo: testStr1))) == arr[i] || Int(String(infoLabel.text.prefix(upTo: testStr2))) == arr[i]) {
                     if location1 != "" {
-                        //infoLabel.text = location1
+                       // infoLabel.text = location1
                         myVC.stringPassed = location1
                         navigationController?.pushViewController(myVC, animated: true)
                         stopCaptureSession()
@@ -179,6 +180,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
                     }
                     //else { infoLabel.text = location2 }
                     else {
+                        //infoLabel.text = location2
                         myVC.stringPassed = location2
                         navigationController?.pushViewController(myVC, animated: true)
                         stopCaptureSession()

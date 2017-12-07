@@ -1,5 +1,5 @@
 //
-//  ViewControllerScanResult.swift
+//  ViewControllerScanResult2.swift
 //  UITest
 //
 //  Created by iHope on 07.12.2017.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewControllerScanResult: UIViewController {
-    @IBOutlet weak var infoLabel: UITextView!
+class ViewControllerScanResult2: UIViewController {
+    @IBOutlet weak var infoLabel2: UITextView!
     
-    var stringPassed = ""
+    var stringPassed2 = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoLabel.text = stringPassed
+        infoLabel2.text = stringPassed2
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +26,8 @@ class ViewControllerScanResult: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         if self.isMovingFromParentViewController {
-            stringPassed = ""
+            stringPassed2 = ""
         }
     }
+
 }

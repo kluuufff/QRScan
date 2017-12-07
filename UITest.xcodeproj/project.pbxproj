@@ -18,6 +18,7 @@
 		176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */; };
 		17C73E591FD9527200FA24CE /* ViewControllerScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */; };
 		17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E5F1FD977E500FA24CE /* TableViewController.swift */; };
+		17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScan.swift; sourceTree = "<group>"; };
 		17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScanResult.swift; sourceTree = "<group>"; };
 		17C73E5F1FD977E500FA24CE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScanResult2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				176AD8001FD1B65B00980212 /* ViewControllerStart.swift */,
 				176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */,
 				17C73E581FD9527200FA24CE /* ViewControllerScanResult.swift */,
+				17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */,
 				17C73E5F1FD977E500FA24CE /* TableViewController.swift */,
 				176AD7D41FD1AB2000980212 /* Main.storyboard */,
 				176AD7D71FD1AB2000980212 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 				176AD7D31FD1AB2000980212 /* ViewController.swift in Sources */,
 				17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */,
 				176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */,
+				17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */,
 				176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */,
 				176AD7D11FD1AB2000980212 /* AppDelegate.swift in Sources */,
 				17C73E591FD9527200FA24CE /* ViewControllerScanResult.swift in Sources */,
