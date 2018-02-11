@@ -144,6 +144,8 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         
         if metadataObj.stringValue != nil { //если можно сконвертировать объект в строку
 
+            
+            /*
             let myVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult") as! ViewControllerScanResult
             let myVC2 = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult2") as! ViewControllerScanResult2
             
@@ -154,6 +156,21 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             if myVC2.stringPassed2 != "" {
                 resumeCaptureSession()
             }
+            */
+            
+            var strVC2 = ""
+            
+            let myVC2 = storyboard?.instantiateViewController(withIdentifier: "ViewControllerScanResult2") as! ViewControllerScanResult2
+            
+            infoLabel.text = metadataObj.stringValue
+            strVC2 = infoLabel.text
+            //myVC2.stringPassed2 = infoLabel.text
+            //navigationController?.pushViewController(myVC2, animated: true)
+            //stopCaptureSession()
+            //if myVC2.stringPassed2 != "" {
+            //    resumeCaptureSession()
+            //}
+            
             
             let arr = countries.map { $0.country }
             
@@ -167,6 +184,9 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             //print(String(describing: countries.map { $0.country }))
             
+            
+            
+            /*
             while (i < arr.count) {
                 if (Int(String(infoLabel.text.prefix(upTo: testStr1))) == arr[i] || Int(String(infoLabel.text.prefix(upTo: testStr2))) == arr[i]) {
                     if location1 != "" {
@@ -191,6 +211,30 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 }
                 i += 1
             }
+            */
+            
+            while (i < arr.count) {
+                if (Int(String(infoLabel.text.prefix(upTo: testStr1))) == arr[i] || Int(String(infoLabel.text.prefix(upTo: testStr2))) == arr[i]) {
+                    if location1 != "" {
+                        strVC2 += "\n"+location1
+                    }
+                    else {
+                        strVC2 += "\n"+location2
+                    }
+                }
+                i += 1
+            }
+            
+            myVC2.stringPassed = infoLabel.text
+            myVC2.stringPassed2 = strVC2
+            navigationController?.pushViewController(myVC2, animated: true)
+            
+            //приостановка видеозахвата
+            stopCaptureSession()
+            //myVC2.stringPassed2 = ""
+            /*if myVC2.stringPassed2 == "" {
+                resumeCaptureSession()
+            }*/
             
             // Stop capture session
             //videoPreviewLayer?.isHidden = true
