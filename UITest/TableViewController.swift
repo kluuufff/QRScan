@@ -17,9 +17,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             
-            navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.topItem?.title = "Архив"
-            navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.topItem?.title = "Архив"
+        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

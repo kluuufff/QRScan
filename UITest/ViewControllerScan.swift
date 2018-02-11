@@ -217,6 +217,4 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         captureSession?.startRunning()
     }
 
-    
-    
 }

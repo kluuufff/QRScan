@@ -27,23 +27,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  /*
-    let placeName = "New York"
     
-    func getImage() {
-        
-        let url = URL(string: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=\(placeName)")
-        let request = URLRequest(url: url! as URL)
-        //let test = JSONSerialization.jsonObject(with: go, options: JSONSerialization.ReadingOptions.allowFragments) as
-        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main){ (response, go, error) -> Void in
-            let go = try? JSONSerialization.jsonObject(with: go!, options: JSONSerialization.ReadingOptions.allowFragments) as![String:AnyObject]
-            let responseData = go!["responseData"] as! [String:AnyObject]
-            let results = responseData["results"] as! [[String:String]]
-            let firstObject = results[0]
-            let firstURL = firstObject["unescapedUrl"]
-            print(responseData)
-        }
-    }
+/*
+     https://www.google.com.ua/search?q=chocolate&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiNy7TNxJvZAhWBNywKHa6uB3UQ_AUICigB&biw=1439&bih=803
+     
+     //google cx = '009299309626749938817:f3xdz2eakq4'
+     //google json api key: AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM
+     //google search api: https://www.googleapis.com/customsearch/v1?q=boom&cx=009299309626749938817%3Af3xdz2eakq4&searchType=image&key={YOUR_API_KEY}
+     
+     
+     //THIS https://www.googleapis.com/customsearch/v1?q=cat&cx=009299309626749938817%3Af3xdz2eakq4&fileType=.jpg%2C+.png%2C+.bmp&searchType=image&key=AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM
 */
 
 }
