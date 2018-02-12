@@ -11,8 +11,8 @@ import UIKit
 class TableViewController: UITableViewController {
 
     
-    var models = ["Scan 1", "Scan 2", "Scan 3", "Scan 4", "Scan 5", "Scan 6"]
-    //var testString = "123"
+    //var models = ["Scan 1", "Scan 2", "Scan 3", "Scan 4", "Scan 5", "Scan 6"]
+    var testString = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,8 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return models.count
-        //return testString.count
+        //return models.count
+        return testString.count
         //return 0
     }
 
@@ -53,8 +53,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
 
-        cell.textLabel?.text = models[indexPath.row]
-        //cell.textLabel?.text = testString
+        //cell.textLabel?.text = models[indexPath.row]
+        
+        cell.textLabel?.text = testString[indexPath.row]
+        
         
         return cell
     }

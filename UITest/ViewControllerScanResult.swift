@@ -10,7 +10,6 @@ import UIKit
 
 class ViewControllerScanResult: UIViewController {
     @IBOutlet weak var infoLabel: UITextView!
-
     
     var stringPassed = ""
     

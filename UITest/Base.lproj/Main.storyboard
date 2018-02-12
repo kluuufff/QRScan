@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Расположите устройство перед кодом" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-L9-kTk">
-                                <rect key="frame" x="0.0" y="490" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="530" width="375" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -85,40 +85,6 @@
             </objects>
             <point key="canvasLocation" x="2432.8000000000002" y="-132.68365817091455"/>
         </scene>
-        <!--View Controller Scan Result-->
-        <scene sceneID="Roq-QI-KyM">
-            <objects>
-                <viewController storyboardIdentifier="ViewControllerScanResult" id="XDa-lW-7lc" customClass="ViewControllerScanResult" customModule="UITest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qfa-GM-FDO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-4j-oat">
-                                <rect key="frame" x="16" y="83" width="343" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asK-aa-fM0">
-                                <rect key="frame" x="164" y="569" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Add"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Gpe-jf-ZmR"/>
-                    </view>
-                    <connections>
-                        <outlet property="infoLabel" destination="tNq-4j-oat" id="v14-iu-ImH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wwm-iA-UXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3229.5999999999999" y="-134.48275862068968"/>
-        </scene>
         <!--View Controller Scan Result2-->
         <scene sceneID="1Kv-p0-yfz">
             <objects>
@@ -127,14 +93,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-qB-hQ4">
-                                <rect key="frame" x="164" y="579" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Add"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXH-Fc-KRs">
-                                <rect key="frame" x="16" y="207" width="343" height="344"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXH-Fc-KRs">
+                                <rect key="frame" x="16" y="194" width="343" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C44-T8-gph">
@@ -145,18 +105,48 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlB-qB-hQ4">
+                                <rect key="frame" x="47" y="544" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92286674219999998" green="0.53955497200000002" blue="0.23500248560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Добавить в архив">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="1Bv-Zq-opc" eventType="touchUpInside" id="daY-JS-TnU"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HM6-xf-gE5">
+                                <rect key="frame" x="169" y="326" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.40343191960000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaY-ge-zrj">
+                                <rect key="frame" x="166" y="333" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TaY-ge-zrj" firstAttribute="centerY" secondItem="hmc-fW-iZv" secondAttribute="centerY" id="2Xs-wf-AbA"/>
+                            <constraint firstItem="TaY-ge-zrj" firstAttribute="centerX" secondItem="hmc-fW-iZv" secondAttribute="centerX" id="3r3-RR-T7X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hmc-fW-iZv"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="rlB-qB-hQ4" id="6Ob-9B-g8c"/>
+                        <outlet property="errLabel" destination="TaY-ge-zrj" id="BLY-TZ-maI"/>
                         <outlet property="infoLabel2" destination="C44-T8-gph" id="OYd-aX-qeG"/>
+                        <outlet property="loader" destination="HM6-xf-gE5" id="Inp-r8-fzn"/>
                         <outlet property="theImage" destination="ZXH-Fc-KRs" id="8Cw-Ju-LnN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60L-nq-9VJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4024.8000000000002" y="-132.68365817091455"/>
+            <point key="canvasLocation" x="3200.8000000000002" y="-134.48275862068968"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="0Ni-8e-gN1">
