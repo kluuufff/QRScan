@@ -36,6 +36,7 @@ class ViewControllerScanResult2: UIViewController {
         //theImage.layer.masksToBounds = true
         
         let str = "https://www.googleapis.com/customsearch/v1?q=\(stringPassed)&cx=009299309626749938817%3Af3xdz2eakq4&fileType=.jpg%2C+.png%2C+.bmp&searchType=image&key=AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM"
+        //let str = "https://www.googleapis.com/customsearch/v1?q=cat&cx=009299309626749938817%3Af3xdz2eakq4&fileType=.jpg%2C+.png%2C+.bmp&searchType=image&key=AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM"
         print(str)
         
         let url = URL(string: str+"")
@@ -50,25 +51,48 @@ class ViewControllerScanResult2: UIViewController {
                     
                     let swiftyJSON = JSON(data: data!)
                     let theEntryArray = swiftyJSON["items"].arrayValue
-                    let theImageArray = theEntryArray[0]["link"].string!
-                    print(theImageArray)
-                    let theImageUrl = URL(string: theImageArray)
-                    if let ImageData = NSData(contentsOf: theImageUrl!) {
-                        self.showLoader(show: false)
-                        DispatchQueue.main.async {
-                            self.theImage.image = UIImage(data: ImageData as Data)
+                    
+                    
+                        if theEntryArray.isEmpty == false {
+                            let theImageArray = theEntryArray[0]["link"].string!
+                            print(theImageArray)
+                            let theImageUrl = URL(string: theImageArray)
+                            if let ImageData = NSData(contentsOf: theImageUrl!) {
+                                self.showLoader(show: false)
+                                DispatchQueue.main.async {
+                                    self.theImage.image = UIImage(data: ImageData as Data)
+                                }
+                                print("Ok")
+                                
+                                self.flag = true
+                            }
+                        } else {
+                            self.showLoader(show: false)
+                            DispatchQueue.main.async {
+                                self.errLabel.text = "Картинок не найдено"
+                            }
                         }
-                        print("Ok")
-                        
-                        self.flag = true
-                    }
+                    
+                    //поиск следующей картинки
+                    /*
+                    let strTemp = theImageArray
+                    for var i in 1...theEntryArray.count {
+                        if strTemp.isEmpty {
+                            theEntryArray[i]["link"].string!
+                        }
+                        i+=i
+                        print(strTemp)
+                    }*/
+                    
                 }
             }
             task.resume()
+            
         } else {
             errLabel.text = "Картинок не найдено"
         }
     }
+    
     
     //loader
     func showLoader(show: Bool){

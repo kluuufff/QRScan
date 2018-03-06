@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17161BD12032229B0028C216 /* packages-icon-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 17161BCE2032229B0028C216 /* packages-icon-33.png */; };
+		17161BD22032229B0028C216 /* qr icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17161BCF2032229B0028C216 /* qr icon.png */; };
+		17161BD32032229B0028C216 /* barcode icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 17161BD02032229B0028C216 /* barcode icon.png */; };
 		1727C6A7202F5DBB00E59F8A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1727C6A6202F5DBB00E59F8A /* SwiftyJSON.framework */; };
+		175E38F32034B76A0064BD39 /* Archive icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 175E38F12034B76A0064BD39 /* Archive icon.png */; };
+		175E38F42034B76A0064BD39 /* qr icon new.png in Resources */ = {isa = PBXBuildFile; fileRef = 175E38F22034B76A0064BD39 /* qr icon new.png */; };
 		176AD7D11FD1AB2000980212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7D01FD1AB2000980212 /* AppDelegate.swift */; };
 		176AD7D31FD1AB2000980212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7D21FD1AB2000980212 /* ViewController.swift */; };
 		176AD7D61FD1AB2000980212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176AD7D41FD1AB2000980212 /* Main.storyboard */; };
@@ -40,8 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17161BCE2032229B0028C216 /* packages-icon-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "packages-icon-33.png"; path = "../../icons/packages-icon-33.png"; sourceTree = "<group>"; };
+		17161BCF2032229B0028C216 /* qr icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qr icon.png"; path = "../../icons/qr icon.png"; sourceTree = "<group>"; };
+		17161BD02032229B0028C216 /* barcode icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barcode icon.png"; path = "../../icons/barcode icon.png"; sourceTree = "<group>"; };
 		1727C6A4202F5D8200E59F8A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1727C6A6202F5DBB00E59F8A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175E38F12034B76A0064BD39 /* Archive icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Archive icon.png"; path = "../../icons/Archive icon.png"; sourceTree = "<group>"; };
+		175E38F22034B76A0064BD39 /* qr icon new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qr icon new.png"; path = "../../icons/qr icon new.png"; sourceTree = "<group>"; };
 		176AD7CD1FD1AB2000980212 /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176AD7D01FD1AB2000980212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176AD7D21FD1AB2000980212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,11 @@
 		176AD7CF1FD1AB2000980212 /* UITest */ = {
 			isa = PBXGroup;
 			children = (
+				175E38F12034B76A0064BD39 /* Archive icon.png */,
+				175E38F22034B76A0064BD39 /* qr icon new.png */,
+				17161BD02032229B0028C216 /* barcode icon.png */,
+				17161BCE2032229B0028C216 /* packages-icon-33.png */,
+				17161BCF2032229B0028C216 /* qr icon.png */,
 				176AD7D01FD1AB2000980212 /* AppDelegate.swift */,
 				176AD7D21FD1AB2000980212 /* ViewController.swift */,
 				176AD8001FD1B65B00980212 /* ViewControllerStart.swift */,
@@ -177,6 +192,8 @@
 				5A17CC3B2A4F462702FACBA4 /* [CP] Check Pods Manifest.lock */,
 				176AD7C91FD1AB2000980212 /* Sources */,
 				176AD7CA1FD1AB2000980212 /* Frameworks */,
+				174CC0AB2034AC5B00C6F1F2 /* Version Number Autoincrement */,
+				174CC0AA2034AB7F00C6F1F2 /* Build Number Autoincrement */,
 				176AD7CB1FD1AB2000980212 /* Resources */,
 				0B50DE2C65FEAB20DA7D8860 /* [CP] Embed Pods Frameworks */,
 				A32FB0D0616D0EBE4E3AD06C /* [CP] Copy Pods Resources */,
@@ -277,9 +294,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175E38F42034B76A0064BD39 /* qr icon new.png in Resources */,
+				17161BD32032229B0028C216 /* barcode icon.png in Resources */,
 				176AD7DB1FD1AB2000980212 /* LaunchScreen.storyboard in Resources */,
 				176AD7D81FD1AB2000980212 /* Assets.xcassets in Resources */,
 				176AD7D61FD1AB2000980212 /* Main.storyboard in Resources */,
+				175E38F32034B76A0064BD39 /* Archive icon.png in Resources */,
+				17161BD12032229B0028C216 /* packages-icon-33.png in Resources */,
+				17161BD22032229B0028C216 /* qr icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +336,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		174CC0AA2034AB7F00C6F1F2 /* Build Number Autoincrement */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Number Autoincrement";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+		174CC0AB2034AC5B00C6F1F2 /* Version Number Autoincrement */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Number Autoincrement";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "VERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		5A17CC3B2A4F462702FACBA4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

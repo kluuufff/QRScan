@@ -54,10 +54,10 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
 
         //cell.textLabel?.text = models[indexPath.row]
-        
+        //tableView.beginUpdates()
+        //tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         cell.textLabel?.text = testString[indexPath.row]
-        
-        
+        //tableView.endUpdates()
         return cell
     }
     

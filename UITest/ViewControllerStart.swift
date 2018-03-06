@@ -11,11 +11,26 @@ import UIKit
 class ViewControllerStart: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var iconQr: UIImageView!
+    @IBOutlet weak var iconBar: UIImageView!
+    @IBOutlet weak var iconBox: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         startButton.layer.cornerRadius = 10
         startButton.clipsToBounds = true
+        /*
+        iconQr.layer.cornerRadius = 10
+        iconQr.clipsToBounds = true
+        iconBar.layer.cornerRadius = 10
+        iconBar.clipsToBounds = true
+        iconBox.layer.cornerRadius = 10
+        iconBox.clipsToBounds = true
+        */
         // Do any additional setup after loading the view.
     }
 

@@ -1,24 +1,31 @@
 import UIKit
 import AVFoundation //фреймворк, отвечающий за мультимедия
+import Vision
 
 //AVCaptureMetadataOutputObjectsDelegate - делегат для декодирования qr
 class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
     @IBOutlet weak var infoLabel: UITextView!
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     var captureSession: AVCaptureSession! //сессия захвата
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     var qrCodeFrameView: UIView?
     let shapeLayer = CAShapeLayer()
     
+    var requests = [VNRequest]()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    var captureDevice: AVCaptureDevice! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //захват видео
-        guard let captureDevice = AVCaptureDevice.default(for: .video) else { return } //устройство захвата; получает данные (1)
+        captureDevice = AVCaptureDevice.default(for: .video) //устройство захвата; получает данные (1)
         
         //получение и обработка данных
         do {
@@ -31,7 +38,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.upce, AVMetadataObject.ObjectType.code39,
-                                                    AVMetadataObject.ObjectType.code39Mod43, AVMetadataObject.ObjectType.code93,
+                                                         AVMetadataObject.ObjectType.code39Mod43, AVMetadataObject.ObjectType.code93,
                                                          AVMetadataObject.ObjectType.code128, AVMetadataObject.ObjectType.ean8,
                                                          AVMetadataObject.ObjectType.ean13, AVMetadataObject.ObjectType.aztec,
                                                          AVMetadataObject.ObjectType.pdf417, AVMetadataObject.ObjectType.qr]
@@ -43,6 +50,8 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             view.layer.addSublayer(videoPreviewLayer!) //вывод видео на экран
             
             captureSession?.startRunning() //запуск захвата видео
+            
+            
             
             self.view.bringSubview(toFront: self.infoLabel)
             
@@ -57,6 +66,32 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         } catch {
             print(error)
             return
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let screenSize = qrCodeFrameView?.bounds.size
+        if let touchPoint = touches.first {
+            let x = touchPoint.location(in: qrCodeFrameView).y / (screenSize?.height)!
+            let y = 1.0 - touchPoint.location(in: qrCodeFrameView).x / (screenSize?.width)!
+            let focusPoint = CGPoint(x: x, y: y)
+            
+            if let device = captureDevice {
+                do {
+                    try device.lockForConfiguration()
+                    
+                    device.focusPointOfInterest = focusPoint
+                    //device.focusMode = .continuousAutoFocus
+                    device.focusMode = .autoFocus
+                    //device.focusMode = .locked
+                    device.exposurePointOfInterest = focusPoint
+                    device.exposureMode = AVCaptureDevice.ExposureMode.continuousAutoExposure
+                    device.unlockForConfiguration()
+                }
+                catch {
+                    // just ignore
+                }
+            }
         }
     }
     
@@ -154,6 +189,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
         //self.qrCodeFrameView.frame = highlightViewRect
         //self.view.bringSubview(toFront: self.qrCodeFrameView!)
         //self.view.addSubview(self.qrCodeFrameView!)
+        
     }
     
     open func stopCaptureSession() {
