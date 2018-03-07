@@ -5,6 +5,7 @@ import Vision
 //AVCaptureMetadataOutputObjectsDelegate - делегат для декодирования qr
 class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
     @IBOutlet weak var infoLabel: UITextView!
+    @IBOutlet weak var viewCam: UIView!
     
     var captureSession: AVCaptureSession! //сессия захвата
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
@@ -44,22 +45,20 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession) //камера на экране
             videoPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-            videoPreviewLayer?.frame = view.layer.bounds
-            view.layer.addSublayer(videoPreviewLayer!) //вывод видео на экран
+            videoPreviewLayer?.frame = viewCam.layer.bounds
+            viewCam.layer.addSublayer(videoPreviewLayer!) //вывод видео на экран
             
             captureSession?.startRunning() //запуск захвата видео
             
-            
-            
-            self.view.bringSubview(toFront: self.infoLabel)
+            self.viewCam.bringSubview(toFront: self.infoLabel)
             
             qrCodeFrameView = UIView()
             //рамка вокруг qr
             if let qrCodeFrameView = qrCodeFrameView {
                 qrCodeFrameView.layer.borderColor = UIColor.orange.cgColor
                 qrCodeFrameView.layer.borderWidth = 3
-                view.addSubview(qrCodeFrameView) //добавление рамки
-                view.bringSubview(toFront: qrCodeFrameView)
+                viewCam.addSubview(qrCodeFrameView) //добавление рамки
+                viewCam.bringSubview(toFront: qrCodeFrameView)
             }
         } catch {
             print(error)

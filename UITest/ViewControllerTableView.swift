@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewControllerTableView: UIViewController, UITableViewDataSource {
+class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,8 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         title = "Архив"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        //self.tableView.register(ViewControllerTableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         if transfer.isEmpty {
             self.tableView.reloadData()
@@ -33,9 +34,13 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! UITableViewCell
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ViewControllerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
         
         let person = people[indexPath.row]
+        //cell.codeLabel?.text = person.value(forKey: "name") as? String
+        //print("\ncell:"+String((cell.codeLabel?.text)!))
+        //cell.nameLabel.text = person.value(forKey: "name") as? String
         cell.textLabel!.text = person.value(forKey: "name") as? String
         
         return cell

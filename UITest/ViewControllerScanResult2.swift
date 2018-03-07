@@ -111,9 +111,12 @@ class ViewControllerScanResult2: UIViewController {
     @IBAction func addButton(_ sender: Any) {
         
         let myTVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerTableView") as! ViewControllerTableView
+        let strPassed2 = stringPassed2.characters.split{$0 == "\n"}.map(String.init)
+        print("str: "+strPassed2[0])
         //if flag == true {
             //myTVC.transfer = stringPassed2
-            myTVC.saveName(name: stringPassed2)
+        
+            myTVC.saveName(name: strPassed2[0])
             //myTVC.self.tableView.reloadData()
             navigationController?.pushViewController(myTVC, animated: true)
         //}
