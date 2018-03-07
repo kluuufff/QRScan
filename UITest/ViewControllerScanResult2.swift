@@ -116,7 +116,7 @@ class ViewControllerScanResult2: UIViewController {
         //if flag == true {
             //myTVC.transfer = stringPassed2
         
-            myTVC.saveName(name: strPassed2[0])
+        myTVC.saveName(code: strPassed2[0], name: strPassed2[1])
             //myTVC.self.tableView.reloadData()
             navigationController?.pushViewController(myTVC, animated: true)
         //}

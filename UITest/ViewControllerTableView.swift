@@ -14,6 +14,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     var people = [NSManagedObject]()
+    var nameLbl = [NSManagedObject]()
     var transfer = String()
     
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
 
         title = "Архив"
         //self.tableView.register(ViewControllerTableViewCell.self, forCellReuseIdentifier: "Cell")
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         if transfer.isEmpty {
             self.tableView.reloadData()
@@ -30,18 +31,20 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        return (people.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ViewControllerTableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ViewControllerTableViewCell
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
         
         let person = people[indexPath.row]
-        //cell.codeLabel?.text = person.value(forKey: "name") as? String
-        //print("\ncell:"+String((cell.codeLabel?.text)!))
-        //cell.nameLabel.text = person.value(forKey: "name") as? String
-        cell.textLabel!.text = person.value(forKey: "name") as? String
+        let names = nameLbl[indexPath.row]
+        cell.codeLabel?.text = person.value(forKey: "name") as? String
+        cell.nameLabel?.text = names.value(forKey: "code") as? String
+        //cell.picProducts?.image = 
+        
+        //cell.textLabel!.text = person.value(forKey: "name") as? String
         
         return cell
     }
@@ -55,7 +58,8 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
-        managedContext.delete(people[indexPath.row] )
+        managedContext.delete(people[indexPath.row])
+        managedContext.delete(nameLbl[indexPath.row])
         do {
             try managedContext.save()
             } catch _ {
@@ -65,34 +69,12 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         if editingStyle == .delete
         {
             people.remove(at: indexPath.row)
+            nameLbl.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
     
-   /* @IBAction func addName(_ sender: Any) {
-        let alert = UIAlertController(title: "New name", message: "Add a new name", preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .default) { (action: UIAlertAction!) -> Void in
-                                        
-            let textField = alert.textFields![0] as! UITextField
-            saveName(name: transfer)
-            self.tableView.reloadData()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action: UIAlertAction!) -> Void in
-        }
-        
-        alert.addTextField {
-            (textField: UITextField!) -> Void in
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        present(alert, animated: true, completion: nil)
-   }*/
-    
-    func saveName(name: String) {
+    func saveName(code: String, name: String) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -102,7 +84,8 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         
         let person = NSManagedObject(entity: entity!, insertInto:managedContext)
 
-        person.setValue(name, forKey: "name")
+        person.setValue(code, forKey: "name")
+        person.setValue(name, forKey: "code")
         
         do {
             try managedContext.save()
@@ -124,8 +107,10 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
             let fetchedResults = try managedContext.fetch(fetchRequest)
             for data in fetchedResults as! [NSManagedObject] {
                 print(data.value(forKey: "name") as! String)
+                print(data.value(forKey: "code") as! String)
             }
             people = fetchedResults as! [NSManagedObject]
+            nameLbl = fetchedResults as! [NSManagedObject]
         } catch {
             print("Failed")
         }
