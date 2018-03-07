@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var inventButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,7 +23,9 @@ class ViewController: UIViewController {
         
         startButton.layer.cornerRadius = 10
         startButton.clipsToBounds = true
-        //getImage()
+        
+        inventButton.layer.cornerRadius = 10
+        inventButton.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

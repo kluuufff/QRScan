@@ -10,6 +10,7 @@ import UIKit
 import SwiftyJSON
 
 class ViewControllerScanResult2: UIViewController {
+    
     @IBOutlet weak var infoLabel2: UITextView!
     @IBOutlet weak var theImage: UIImageView!
     @IBOutlet weak var addButton: UIButton!
@@ -108,11 +109,14 @@ class ViewControllerScanResult2: UIViewController {
     }
     
     @IBAction func addButton(_ sender: Any) {
-        let myTVC = storyboard?.instantiateViewController(withIdentifier: "tableView") as! TableViewController
-        if flag == true {
-            myTVC.testString += [stringPassed2]
+        
+        let myTVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerTableView") as! ViewControllerTableView
+        //if flag == true {
+            //myTVC.transfer = stringPassed2
+            myTVC.saveName(name: stringPassed2)
+            //myTVC.self.tableView.reloadData()
             navigationController?.pushViewController(myTVC, animated: true)
-        }
+        //}
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -122,5 +126,6 @@ class ViewControllerScanResult2: UIViewController {
             //stringPassed2 = ""
         }
     }
+    
 }
 

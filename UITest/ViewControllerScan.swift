@@ -6,8 +6,6 @@ import Vision
 class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
     @IBOutlet weak var infoLabel: UITextView!
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     var captureSession: AVCaptureSession! //сессия захвата
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     var qrCodeFrameView: UIView?

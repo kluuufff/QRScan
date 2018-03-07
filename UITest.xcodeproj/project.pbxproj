@@ -22,7 +22,11 @@
 		176AD7F11FD1AB2000980212 /* UITestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD7F01FD1AB2000980212 /* UITestUITests.swift */; };
 		176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD8001FD1B65B00980212 /* ViewControllerStart.swift */; };
 		176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */; };
-		17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E5F1FD977E500FA24CE /* TableViewController.swift */; };
+		17A436AA205017C100457392 /* ViewControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A436A9205017C100457392 /* ViewControllerTableView.swift */; };
+		17A436AD20501B0400457392 /* HitList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17A436AB20501B0400457392 /* HitList.xcdatamodeld */; };
+		17AE890E204EC93E00AB9D17 /* ViewControllerInvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE890D204EC93E00AB9D17 /* ViewControllerInvent.swift */; };
+		17AE8912204EE9A000AB9D17 /* ViewControllerTakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */; };
+		17AE8920204EE9F500AB9D17 /* no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AE891F204EE9F500AB9D17 /* no_photo.png */; };
 		17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */; };
 		6662992C4313A9A382987B2A /* Pods_UITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +71,11 @@
 		176AD7F21FD1AB2000980212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		176AD8001FD1B65B00980212 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScan.swift; sourceTree = "<group>"; };
-		17C73E5F1FD977E500FA24CE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		17A436A9205017C100457392 /* ViewControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableView.swift; sourceTree = "<group>"; };
+		17A436AC20501B0400457392 /* HitList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HitList.xcdatamodel; sourceTree = "<group>"; };
+		17AE890D204EC93E00AB9D17 /* ViewControllerInvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInvent.swift; sourceTree = "<group>"; };
+		17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTakePhoto.swift; sourceTree = "<group>"; };
+		17AE891F204EE9F500AB9D17 /* no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_photo.png; sourceTree = "<group>"; };
 		17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScanResult2.swift; sourceTree = "<group>"; };
 		BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.debug.xcconfig"; sourceTree = "<group>"; };
 		E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,16 +139,20 @@
 				17161BD02032229B0028C216 /* barcode icon.png */,
 				17161BCE2032229B0028C216 /* packages-icon-33.png */,
 				17161BCF2032229B0028C216 /* qr icon.png */,
+				17AE891F204EE9F500AB9D17 /* no_photo.png */,
 				176AD7D01FD1AB2000980212 /* AppDelegate.swift */,
 				176AD7D21FD1AB2000980212 /* ViewController.swift */,
 				176AD8001FD1B65B00980212 /* ViewControllerStart.swift */,
 				176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */,
 				17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */,
-				17C73E5F1FD977E500FA24CE /* TableViewController.swift */,
+				17AE890D204EC93E00AB9D17 /* ViewControllerInvent.swift */,
+				17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */,
+				17A436A9205017C100457392 /* ViewControllerTableView.swift */,
 				176AD7D41FD1AB2000980212 /* Main.storyboard */,
 				176AD7D71FD1AB2000980212 /* Assets.xcassets */,
 				176AD7D91FD1AB2000980212 /* LaunchScreen.storyboard */,
 				176AD7DC1FD1AB2000980212 /* Info.plist */,
+				17A436AB20501B0400457392 /* HitList.xcdatamodeld */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -295,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175E38F42034B76A0064BD39 /* qr icon new.png in Resources */,
+				17AE8920204EE9F500AB9D17 /* no_photo.png in Resources */,
 				17161BD32032229B0028C216 /* barcode icon.png in Resources */,
 				176AD7DB1FD1AB2000980212 /* LaunchScreen.storyboard in Resources */,
 				176AD7D81FD1AB2000980212 /* Assets.xcassets in Resources */,
@@ -403,10 +416,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				176AD7D31FD1AB2000980212 /* ViewController.swift in Sources */,
-				17C73E601FD977E500FA24CE /* TableViewController.swift in Sources */,
 				176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */,
 				17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */,
+				17AE890E204EC93E00AB9D17 /* ViewControllerInvent.swift in Sources */,
 				176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */,
+				17AE8912204EE9A000AB9D17 /* ViewControllerTakePhoto.swift in Sources */,
+				17A436AD20501B0400457392 /* HitList.xcdatamodeld in Sources */,
+				17A436AA205017C100457392 /* ViewControllerTableView.swift in Sources */,
 				176AD7D11FD1AB2000980212 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +727,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17A436AB20501B0400457392 /* HitList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17A436AC20501B0400457392 /* HitList.xcdatamodel */,
+			);
+			currentVersion = 17A436AC20501B0400457392 /* HitList.xcdatamodel */;
+			path = HitList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 176AD7C51FD1AB2000980212 /* Project object */;
 }
