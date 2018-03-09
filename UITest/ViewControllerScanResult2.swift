@@ -113,13 +113,14 @@ class ViewControllerScanResult2: UIViewController {
         let myTVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerTableView") as! ViewControllerTableView
         let strPassed2 = stringPassed2.characters.split{$0 == "\n"}.map(String.init)
         print("str: "+strPassed2[0])
+        
         //if flag == true {
             //myTVC.transfer = stringPassed2
-        
-        myTVC.saveName(code: strPassed2[0], name: strPassed2[1])
-            //myTVC.self.tableView.reloadData()
-            navigationController?.pushViewController(myTVC, animated: true)
         //}
+        
+            myTVC.saveName(code: strPassed2[0], name: strPassed2[1])
+            myTVC.testImage = theImage.image!
+            navigationController?.pushViewController(myTVC, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

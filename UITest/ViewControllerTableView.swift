@@ -17,6 +17,8 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     var nameLbl = [NSManagedObject]()
     var transfer = String()
     
+    var testImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +30,25 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
             self.tableView.reloadData()
         }
         else { self.tableView.reloadData() }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Person")
+        
+        do {
+            let fetchedResults = try managedContext.fetch(fetchRequest)
+            for data in fetchedResults as! [NSManagedObject] {
+                print(data.value(forKey: "name") as! String)
+                print(data.value(forKey: "code") as! String)
+            }
+            people = fetchedResults as! [NSManagedObject]
+            nameLbl = fetchedResults as! [NSManagedObject]
+        } catch {
+            print("Failed")
+        }
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +63,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         let names = nameLbl[indexPath.row]
         cell.codeLabel?.text = person.value(forKey: "name") as? String
         cell.nameLabel?.text = names.value(forKey: "code") as? String
-        //cell.picProducts?.image = 
+        cell.picProducts?.image = testImage
         
         //cell.textLabel!.text = person.value(forKey: "name") as? String
         
@@ -94,25 +115,5 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         }
         
         //people.append(person)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Person")
-        
-        do {
-            let fetchedResults = try managedContext.fetch(fetchRequest)
-            for data in fetchedResults as! [NSManagedObject] {
-                print(data.value(forKey: "name") as! String)
-                print(data.value(forKey: "code") as! String)
-            }
-            people = fetchedResults as! [NSManagedObject]
-            nameLbl = fetchedResults as! [NSManagedObject]
-        } catch {
-            print("Failed")
-        }
     }
 }
