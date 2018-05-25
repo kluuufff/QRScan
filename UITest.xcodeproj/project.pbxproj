@@ -29,6 +29,9 @@
 		17AE890E204EC93E00AB9D17 /* ViewControllerInvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE890D204EC93E00AB9D17 /* ViewControllerInvent.swift */; };
 		17AE8912204EE9A000AB9D17 /* ViewControllerTakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */; };
 		17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */; };
+		17E682D320B82C8300FBBDE4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E682D220B82C8300FBBDE4 /* CloudKit.framework */; };
+		17EBD7E2205FF3CA009E2671 /* ViewControllerTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBD7E1205FF3CA009E2671 /* ViewControllerTableViewCell2.swift */; };
+		17EBD7E420600894009E2671 /* ViewControllerTableViewCellsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBD7E320600894009E2671 /* ViewControllerTableViewCellsInfo.swift */; };
 		6662992C4313A9A382987B2A /* Pods_UITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,7 @@
 		176AD7F21FD1AB2000980212 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		176AD8001FD1B65B00980212 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		176AD8021FD1BC0C00980212 /* ViewControllerScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScan.swift; sourceTree = "<group>"; };
+		176DA08320B826580056153C /* UITest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UITest.entitlements; sourceTree = "<group>"; };
 		17A436A9205017C100457392 /* ViewControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableView.swift; sourceTree = "<group>"; };
 		17A436AC20501B0400457392 /* HitList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HitList.xcdatamodel; sourceTree = "<group>"; };
 		17A436AE205058E500457392 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +83,9 @@
 		17AE890D204EC93E00AB9D17 /* ViewControllerInvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInvent.swift; sourceTree = "<group>"; };
 		17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTakePhoto.swift; sourceTree = "<group>"; };
 		17C73E611FD9ABDE00FA24CE /* ViewControllerScanResult2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScanResult2.swift; sourceTree = "<group>"; };
+		17E682D220B82C8300FBBDE4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		17EBD7E1205FF3CA009E2671 /* ViewControllerTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell2.swift; sourceTree = "<group>"; };
+		17EBD7E320600894009E2671 /* ViewControllerTableViewCellsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCellsInfo.swift; sourceTree = "<group>"; };
 		BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.debug.xcconfig"; sourceTree = "<group>"; };
 		E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD00366DB744BCB6961F5A53 /* Pods-UITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E682D320B82C8300FBBDE4 /* CloudKit.framework in Frameworks */,
 				1727C6A7202F5DBB00E59F8A /* SwiftyJSON.framework in Frameworks */,
 				6662992C4313A9A382987B2A /* Pods_UITest.framework in Frameworks */,
 			);
@@ -136,6 +144,7 @@
 		176AD7CF1FD1AB2000980212 /* UITest */ = {
 			isa = PBXGroup;
 			children = (
+				176DA08320B826580056153C /* UITest.entitlements */,
 				17A436B0205068CA00457392 /* no_photo.png */,
 				17A436B52050692700457392 /* Archive icon.png */,
 				17A436B32050692600457392 /* barcode icon.png */,
@@ -151,6 +160,8 @@
 				17AE8911204EE9A000AB9D17 /* ViewControllerTakePhoto.swift */,
 				17A436A9205017C100457392 /* ViewControllerTableView.swift */,
 				17A436AE205058E500457392 /* ViewControllerTableViewCell.swift */,
+				17EBD7E1205FF3CA009E2671 /* ViewControllerTableViewCell2.swift */,
+				17EBD7E320600894009E2671 /* ViewControllerTableViewCellsInfo.swift */,
 				176AD7D41FD1AB2000980212 /* Main.storyboard */,
 				176AD7D71FD1AB2000980212 /* Assets.xcassets */,
 				176AD7D91FD1AB2000980212 /* LaunchScreen.storyboard */,
@@ -190,6 +201,7 @@
 		9169586184D620E18F8C899C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17E682D220B82C8300FBBDE4 /* CloudKit.framework */,
 				1727C6A6202F5DBB00E59F8A /* SwiftyJSON.framework */,
 				1727C6A4202F5D8200E59F8A /* SwiftyJSON.framework */,
 				E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */,
@@ -270,7 +282,15 @@
 				TargetAttributes = {
 					176AD7CC1FD1AB2000980212 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					176AD7E01FD1AB2000980212 = {
 						CreatedOnToolsVersion = 9.1;
@@ -420,9 +440,11 @@
 			files = (
 				176AD7D31FD1AB2000980212 /* ViewController.swift in Sources */,
 				176AD8011FD1B65B00980212 /* ViewControllerStart.swift in Sources */,
+				17EBD7E2205FF3CA009E2671 /* ViewControllerTableViewCell2.swift in Sources */,
 				17A436AF205058E500457392 /* ViewControllerTableViewCell.swift in Sources */,
 				17C73E621FD9ABDE00FA24CE /* ViewControllerScanResult2.swift in Sources */,
 				17AE890E204EC93E00AB9D17 /* ViewControllerInvent.swift in Sources */,
+				17EBD7E420600894009E2671 /* ViewControllerTableViewCellsInfo.swift in Sources */,
 				176AD8031FD1BC0C00980212 /* ViewControllerScan.swift in Sources */,
 				17AE8912204EE9A000AB9D17 /* ViewControllerTakePhoto.swift in Sources */,
 				17A436AD20501B0400457392 /* products.xcdatamodeld in Sources */,
@@ -513,7 +535,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nadin Voznyak (P575VGH9LT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -532,10 +554,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.3;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -572,7 +594,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Nadin Voznyak (9SR6C9RNX9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -585,9 +607,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -598,13 +620,19 @@
 			baseConfigurationReference = BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = UITest/UITest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9SR6C9RNX9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "55cac72d-40b3-462f-af82-2a01d452849d";
+				PROVISIONING_PROFILE_SPECIFIER = iHopeDev;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -615,13 +643,19 @@
 			baseConfigurationReference = FD00366DB744BCB6961F5A53 /* Pods-UITest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = UITest/UITest.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 9SR6C9RNX9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f20176f4-a9a9-40fb-afa3-a3c5f1aaaa69";
+				PROVISIONING_PROFILE_SPECIFIER = iHopeAppStoreDistr;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

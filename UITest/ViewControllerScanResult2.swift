@@ -32,13 +32,13 @@ class ViewControllerScanResult2: UIViewController {
         
         infoLabel2.text = stringPassed2
         //infoLabel2.text += stringPassed2
-        print(infoLabel2.text)
+        //print(infoLabel2.text)
         
         //theImage.layer.masksToBounds = true
         
         let str = "https://www.googleapis.com/customsearch/v1?q=\(stringPassed)&cx=009299309626749938817%3Af3xdz2eakq4&fileType=.jpg%2C+.png%2C+.bmp&searchType=image&key=AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM"
         //let str = "https://www.googleapis.com/customsearch/v1?q=cat&cx=009299309626749938817%3Af3xdz2eakq4&fileType=.jpg%2C+.png%2C+.bmp&searchType=image&key=AIzaSyDvMGKw1DfmYaWlL9f4SyrnGgzfgaPOeCM"
-        print(str)
+        //print(str)
         
         let url = URL(string: str+"")
         
@@ -56,17 +56,17 @@ class ViewControllerScanResult2: UIViewController {
                     
                         if theEntryArray.isEmpty == false {
                             let theImageArray = theEntryArray[0]["link"].string!
-                            print(theImageArray)
+                            //print(theImageArray)
                             let theImageUrl = URL(string: theImageArray)
                             if let ImageData = NSData(contentsOf: theImageUrl!) {
                                 self.showLoader(show: false)
                                 DispatchQueue.main.async {
                                     self.theImage.image = UIImage(data: ImageData as Data)
                                 }
-                                print("Ok")
-                                
+                                //print("Ok")
                                 self.flag = true
                             }
+                            
                         } else {
                             self.showLoader(show: false)
                             DispatchQueue.main.async {
@@ -111,15 +111,19 @@ class ViewControllerScanResult2: UIViewController {
     @IBAction func addButton(_ sender: Any) {
         
         let myTVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerTableView") as! ViewControllerTableView
-        let strPassed2 = stringPassed2.characters.split{$0 == "\n"}.map(String.init)
-        print("str: "+strPassed2[0])
+        var strPassed2 = stringPassed2.characters.split{$0 == "\n"}.map(String.init)
+        //print("str: "+strPassed2[0])
         
         //if flag == true {
             //myTVC.transfer = stringPassed2
         //}
-        
+        if strPassed2.indices.contains(1) {
+            //print("yes")
+        } else {
+            strPassed2.insert("", at: 1)
+        }
             myTVC.saveName(code: strPassed2[0], name: strPassed2[1])
-            myTVC.testImage = theImage.image!
+            //myTVC.testImage = theImage.image!
             navigationController?.pushViewController(myTVC, animated: true)
     }
     

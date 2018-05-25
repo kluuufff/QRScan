@@ -16,8 +16,9 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     var people = [NSManagedObject]()
     var nameLbl = [NSManagedObject]()
     var transfer = String()
+    var flag = 0
     
-    var testImage: UIImage!
+    //var testImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,16 +40,13 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
             let fetchedResults = try managedContext.fetch(fetchRequest)
             for data in fetchedResults as! [NSManagedObject] {
                 print(data.value(forKey: "name") as! String)
-                print(data.value(forKey: "code") as! String)
+                //print(data.value(forKey: "code") as! String)
             }
             people = fetchedResults as! [NSManagedObject]
             nameLbl = fetchedResults as! [NSManagedObject]
         } catch {
-            print("Failed")
+            //print("Failed")
         }
-        
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,18 +54,29 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ViewControllerTableViewCell
+        
+        cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ViewControllerTableViewCell
+        _ = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! ViewControllerTableViewCell2
         //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
         
         let person = people[indexPath.row]
         let names = nameLbl[indexPath.row]
-        cell.codeLabel?.text = person.value(forKey: "name") as? String
-        cell.nameLabel?.text = names.value(forKey: "code") as? String
-        cell.picProducts?.image = testImage
-        
+        //if flag == 0 {
+        cell?.codeLabel?.text = person.value(forKey: "name") as? String
+        cell?.nameLabel?.text = names.value(forKey: "code") as? String
+       /* }
+        if flag == 1 {
+            cell2.urlText?.text = person.value(forKey: "name") as? String
+        }*/
+        //cell.picProducts?.image = testImage
         //cell.textLabel!.text = person.value(forKey: "name") as? String
-        
-        return cell
+        /*
+        if flag == 0 {
+            return cell
+        } else {
+            return cell2
+        }*/
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
@@ -84,7 +93,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         do {
             try managedContext.save()
             } catch _ {
-            print("Error")
+            //print("Error")
         }
         
         if editingStyle == .delete
@@ -107,13 +116,36 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
 
         person.setValue(code, forKey: "name")
         person.setValue(name, forKey: "code")
+        //person.setValue(name, forKey: "url")
         
         do {
             try managedContext.save()
         } catch {
-            print("Failed saving")
+            //print("Failed saving")
+        }
+        
+        if name.isEmpty {
+            print("name: \(name)")
+            flag = 1
         }
         
         //people.append(person)
+    }
+    
+    var cell: ViewControllerTableViewCell?
+    
+    var myIndex = 0
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let selectedRowIndex = myIndex
+            let myVC = segue.destination as! ViewControllerTableViewCellsInfo
+            if selectedRowIndex == myIndex {
+                myVC.code = (cell?.codeLabel.text)!
+                myVC.country = (cell?.nameLabel.text)!
+            }
     }
 }
