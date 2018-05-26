@@ -141,7 +141,7 @@ class ViewControllerInvent: UIViewController, UIPickerViewDataSource, UIPickerVi
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
         }
-        
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -150,6 +150,11 @@ class ViewControllerInvent: UIViewController, UIPickerViewDataSource, UIPickerVi
             productPic.image = pickedImage
         }
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addData(_ sender: Any) {
+        let myTVC = storyboard?.instantiateViewController(withIdentifier: "ViewControllerTableView") as! ViewControllerTableView
+        navigationController?.pushViewController(myTVC, animated: true)
     }
     
 }

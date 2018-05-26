@@ -144,7 +144,6 @@
 		176AD7CF1FD1AB2000980212 /* UITest */ = {
 			isa = PBXGroup;
 			children = (
-				176DA08320B826580056153C /* UITest.entitlements */,
 				17A436B0205068CA00457392 /* no_photo.png */,
 				17A436B52050692700457392 /* Archive icon.png */,
 				17A436B32050692600457392 /* barcode icon.png */,
@@ -165,6 +164,7 @@
 				176AD7D41FD1AB2000980212 /* Main.storyboard */,
 				176AD7D71FD1AB2000980212 /* Assets.xcassets */,
 				176AD7D91FD1AB2000980212 /* LaunchScreen.storyboard */,
+				176DA08320B826580056153C /* UITest.entitlements */,
 				176AD7DC1FD1AB2000980212 /* Info.plist */,
 				17A436AB20501B0400457392 /* products.xcdatamodeld */,
 			);

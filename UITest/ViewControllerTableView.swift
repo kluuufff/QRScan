@@ -56,7 +56,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ViewControllerTableViewCell
-        _ = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! ViewControllerTableViewCell2
+        //_ = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! ViewControllerTableViewCell2
         //let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UITableViewCell
         
         let person = people[indexPath.row]
@@ -107,13 +107,9 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     func saveName(code: String, name: String) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
         let managedContext = appDelegate.persistentContainer.viewContext
-
         let entity =  NSEntityDescription.entity(forEntityName: "Person", in: managedContext)
-        
         let person = NSManagedObject(entity: entity!, insertInto:managedContext)
-
         person.setValue(code, forKey: "name")
         person.setValue(name, forKey: "code")
         //person.setValue(name, forKey: "url")
@@ -121,7 +117,7 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
         do {
             try managedContext.save()
         } catch {
-            //print("Failed saving")
+            print("Failed saving")
         }
         
         if name.isEmpty {
@@ -136,16 +132,29 @@ class ViewControllerTableView: UIViewController, UITableViewDataSource, UITableV
     
     var myIndex = 0
     
+    //var selectedCell: IndexPath = []
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
+        //print(people[indexPath.row])
+        print(indexPath.row)
+
+        //selectedCell = indexPath
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let myVC = segue.destination as! ViewControllerTableViewCellsInfo
+        
+        //if self.selectedCell.row == myIndex {
+            myVC.code = (cell?.codeLabel.text)!
+            myVC.country = (cell?.nameLabel.text)!
+        //}
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let selectedRowIndex = myIndex
-            let myVC = segue.destination as! ViewControllerTableViewCellsInfo
-            if selectedRowIndex == myIndex {
-                myVC.code = (cell?.codeLabel.text)!
-                myVC.country = (cell?.nameLabel.text)!
-            }
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
     }
 }

@@ -159,6 +159,10 @@
                                                 <state key="normal" title="Добавить в архив">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addData:" destination="h4I-5O-DUX" eventType="touchUpInside" id="Jeo-gy-QbH"/>
+                                                    <action selector="addData:" destination="2i1-t9-Hs2" eventType="touchUpInside" id="xUw-wV-ov2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -203,6 +207,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AG-PN-iwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2i1-t9-Hs2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4487.1999999999998" y="192.50374812593705"/>
         </scene>
@@ -236,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUp-QT-bQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5511.1999999999998" y="42.728635682158924"/>
+            <point key="canvasLocation" x="5289" y="43"/>
         </scene>
         <!--View Controller Scan-->
         <scene sceneID="kI4-fr-law">
@@ -647,7 +652,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReT-cx-Zah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="557.27136431784118"/>
+            <point key="canvasLocation" x="2591" y="542"/>
         </scene>
         <!--View Controller Table View Cells Info-->
         <scene sceneID="ERp-wV-HNN">
@@ -714,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sqa-hJ-72l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3335" y="558"/>
+            <point key="canvasLocation" x="3361" y="542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sjn-TO-wED">
@@ -733,7 +738,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urA-K3-Lii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="960"/>
+            <point key="canvasLocation" x="1652" y="914"/>
         </scene>
     </scenes>
     <resources>
