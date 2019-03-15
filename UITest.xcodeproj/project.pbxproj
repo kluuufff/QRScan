@@ -32,7 +32,7 @@
 		17E682D320B82C8300FBBDE4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E682D220B82C8300FBBDE4 /* CloudKit.framework */; };
 		17EBD7E2205FF3CA009E2671 /* ViewControllerTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBD7E1205FF3CA009E2671 /* ViewControllerTableViewCell2.swift */; };
 		17EBD7E420600894009E2671 /* ViewControllerTableViewCellsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EBD7E320600894009E2671 /* ViewControllerTableViewCellsInfo.swift */; };
-		6662992C4313A9A382987B2A /* Pods_UITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */; };
+		C016F4289166AD9BF9936FB7 /* Pods_UITest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F789D4D0BF8B1C0A0EF1FD /* Pods_UITest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +86,9 @@
 		17E682D220B82C8300FBBDE4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		17EBD7E1205FF3CA009E2671 /* ViewControllerTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell2.swift; sourceTree = "<group>"; };
 		17EBD7E320600894009E2671 /* ViewControllerTableViewCellsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCellsInfo.swift; sourceTree = "<group>"; };
-		BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.debug.xcconfig"; sourceTree = "<group>"; };
-		E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD00366DB744BCB6961F5A53 /* Pods-UITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.release.xcconfig"; sourceTree = "<group>"; };
+		37F789D4D0BF8B1C0A0EF1FD /* Pods_UITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD68AEA0EC55DE8C032D7410 /* Pods-UITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.release.xcconfig"; sourceTree = "<group>"; };
+		FD48E6B893EB870ACE4A5FBA /* Pods-UITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UITest/Pods-UITest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			files = (
 				17E682D320B82C8300FBBDE4 /* CloudKit.framework in Frameworks */,
 				1727C6A7202F5DBB00E59F8A /* SwiftyJSON.framework in Frameworks */,
-				6662992C4313A9A382987B2A /* Pods_UITest.framework in Frameworks */,
+				C016F4289166AD9BF9936FB7 /* Pods_UITest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02184076E1AB6476B77EAFAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD48E6B893EB870ACE4A5FBA /* Pods-UITest.debug.xcconfig */,
+				CD68AEA0EC55DE8C032D7410 /* Pods-UITest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		176AD7C41FD1AB2000980212 = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +135,8 @@
 				176AD7E41FD1AB2000980212 /* UITestTests */,
 				176AD7EF1FD1AB2000980212 /* UITestUITests */,
 				176AD7CE1FD1AB2000980212 /* Products */,
-				5FF0589FF9AC405B034B7524 /* Pods */,
 				9169586184D620E18F8C899C /* Frameworks */,
+				02184076E1AB6476B77EAFAF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,22 +198,13 @@
 			path = UITestUITests;
 			sourceTree = "<group>";
 		};
-		5FF0589FF9AC405B034B7524 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */,
-				FD00366DB744BCB6961F5A53 /* Pods-UITest.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9169586184D620E18F8C899C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				17E682D220B82C8300FBBDE4 /* CloudKit.framework */,
 				1727C6A6202F5DBB00E59F8A /* SwiftyJSON.framework */,
 				1727C6A4202F5D8200E59F8A /* SwiftyJSON.framework */,
-				E183E58818EEA448C5D00DF6 /* Pods_UITest.framework */,
+				37F789D4D0BF8B1C0A0EF1FD /* Pods_UITest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,14 +216,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 176AD7F51FD1AB2000980212 /* Build configuration list for PBXNativeTarget "UITest" */;
 			buildPhases = (
-				5A17CC3B2A4F462702FACBA4 /* [CP] Check Pods Manifest.lock */,
+				2745C4DB6BC9AF6FA674273F /* [CP] Check Pods Manifest.lock */,
 				176AD7C91FD1AB2000980212 /* Sources */,
 				176AD7CA1FD1AB2000980212 /* Frameworks */,
 				174CC0AB2034AC5B00C6F1F2 /* Version Number Autoincrement */,
 				174CC0AA2034AB7F00C6F1F2 /* Build Number Autoincrement */,
 				176AD7CB1FD1AB2000980212 /* Resources */,
-				0B50DE2C65FEAB20DA7D8860 /* [CP] Embed Pods Frameworks */,
-				A32FB0D0616D0EBE4E3AD06C /* [CP] Copy Pods Resources */,
+				7B28671672F872A681B4933C /* [CP] Embed Pods Frameworks */,
+				0D12D23D8926D791445B0373 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,15 +277,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = iHope;
 				TargetAttributes = {
 					176AD7CC1FD1AB2000980212 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -294,11 +295,13 @@
 					};
 					176AD7E01FD1AB2000980212 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 176AD7CC1FD1AB2000980212;
 					};
 					176AD7EB1FD1AB2000980212 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 176AD7CC1FD1AB2000980212;
 					};
@@ -358,19 +361,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B50DE2C65FEAB20DA7D8860 /* [CP] Embed Pods Frameworks */ = {
+		0D12D23D8926D791445B0373 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		174CC0AA2034AB7F00C6F1F2 /* Build Number Autoincrement */ = {
@@ -385,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 		174CC0AB2034AC5B00C6F1F2 /* Version Number Autoincrement */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -399,36 +402,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "VERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "VERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWSUBVERSION=`echo $VERSIONNUM | awk -F \".\" '{print $3}'`\nNEWSUBVERSION=$(($NEWSUBVERSION + 1))\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$NEWSUBVERSION'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
-		5A17CC3B2A4F462702FACBA4 /* [CP] Check Pods Manifest.lock */ = {
+		2745C4DB6BC9AF6FA674273F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UITest-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A32FB0D0616D0EBE4E3AD06C /* [CP] Copy Pods Resources */ = {
+		7B28671672F872A681B4933C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UITest/Pods-UITest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -554,10 +563,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos11.3;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -607,9 +616,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos11.3;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -617,46 +626,46 @@
 		};
 		176AD7F61FD1AB2000980212 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEA10F5C72800C51D95A9A7D /* Pods-UITest.debug.xcconfig */;
+			baseConfigurationReference = FD48E6B893EB870ACE4A5FBA /* Pods-UITest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UITest/UITest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SR6C9RNX9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UITest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "55cac72d-40b3-462f-af82-2a01d452849d";
-				PROVISIONING_PROFILE_SPECIFIER = iHopeDev;
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		176AD7F71FD1AB2000980212 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD00366DB744BCB6961F5A53 /* Pods-UITest.release.xcconfig */;
+			baseConfigurationReference = CD68AEA0EC55DE8C032D7410 /* Pods-UITest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UITest/UITest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SR6C9RNX9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = UITest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f20176f4-a9a9-40fb-afa3-a3c5f1aaaa69";
-				PROVISIONING_PROFILE_SPECIFIER = iHopeAppStoreDistr;
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE = "b1c3b207-61ef-4e6b-a142-2c3f6992bd81";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -672,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITest.app/UITest";
 			};
@@ -689,7 +698,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITest.app/UITest";
 			};
@@ -705,7 +714,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UITest;
 			};
@@ -721,7 +730,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ihope.UITestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = UITest;
 			};

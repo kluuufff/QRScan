@@ -50,7 +50,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             captureSession?.startRunning() //запуск захвата видео
             
-            self.viewCam.bringSubview(toFront: self.infoLabel)
+            self.viewCam.bringSubviewToFront(self.infoLabel)
             
             qrCodeFrameView = UIView()
             //рамка вокруг qr
@@ -58,7 +58,7 @@ class ViewControllerScan: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 qrCodeFrameView.layer.borderColor = UIColor.orange.cgColor
                 qrCodeFrameView.layer.borderWidth = 3
                 viewCam.addSubview(qrCodeFrameView) //добавление рамки
-                viewCam.bringSubview(toFront: qrCodeFrameView)
+                viewCam.bringSubviewToFront(qrCodeFrameView)
             }
         } catch {
             print(error)

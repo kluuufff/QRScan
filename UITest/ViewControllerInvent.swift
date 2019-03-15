@@ -134,18 +134,21 @@ class ViewControllerInvent: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     @IBAction func takePhoto(_ sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+        if //UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceTypeUIImagePickerController.SourceType.camera)
+            UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)
+        {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
+            //self.present(imagePicker, animated: true, completprivate, ion: nil)
         }
 
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             productPic.contentMode = .scaleToFill
             productPic.image = pickedImage
         }

@@ -47,12 +47,12 @@ class ViewControllerScanResult2: UIViewController {
             self.showLoader(show: true)
             let session = URLSession(configuration: URLSessionConfiguration.default)
             let task = session.dataTask(with: url!) { (data, _, error) in
-                
+            
                 if(error == nil) {
+                    do {
+                    let swiftyJSON = try JSON(data: data!)
                     
-                    let swiftyJSON = JSON(data: data!)
                     let theEntryArray = swiftyJSON["items"].arrayValue
-                    
                     
                         if theEntryArray.isEmpty == false {
                             let theImageArray = theEntryArray[0]["link"].string!
@@ -73,6 +73,9 @@ class ViewControllerScanResult2: UIViewController {
                                 self.errLabel.text = "Картинок не найдено"
                             }
                         }
+                    } catch {
+                        print("Error")
+                    }
                     
                     //поиск следующей картинки
                     /*
@@ -128,7 +131,7 @@ class ViewControllerScanResult2: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if self.isMovingFromParentViewController {
+        if self.isMovingFromParent {
             //отправка пустой строки в родительский контроллер
             //stringPassed = ""
             //stringPassed2 = ""
