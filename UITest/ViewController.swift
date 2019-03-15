@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         inventButton.layer.cornerRadius = 10
         inventButton.clipsToBounds = true
-    }
+    } 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
